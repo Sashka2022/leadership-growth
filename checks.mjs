@@ -18,5 +18,7 @@ a.run('exportPlan()');assert.equal(a.downloads[0][0],'כרטיס-החלטה.txt'
 a.run('backup()');const backup=JSON.parse(a.downloads[1][1]);assert.equal(backup.data.fields.interpretation,'PRIVATE-REFLECTION');
 const b=app(JSON.parse(a.store.get('leadership-growth-v1')));assert.equal(b.run('data.fields.change'),'PUBLIC-CHANGE');assert.equal(b.run('data.route'),'autonomy');
 const c=app(null,true);assert.equal(c.nodes.get('#save-status').textContent,'השמירה אינה זמינה');c.run('go(7)');assert.match(c.nodes.get('#main').innerHTML,/מחשבה שהופכת לצעד/);
-assert.equal(a.run('phases.reduce((n,p)=>n+p[1],0)'),12);
-console.log('PASS: all screens render; progress restores; export excludes private reflections; HTML is escaped; backup retains notebook; blocked storage remains usable; rehearsal totals 12 minutes.');
+assert.equal(a.run('phases.reduce((n,p)=>n+p[1],0)'),8);
+assert.equal(a.run('steps.reduce((n,s)=>n+parseInt(s.sub,10),0)'),60);
+assert.ok(printed.includes('assets/logo-haifa.png')&&printed.includes('assets/logo-reshit.png')&&printed.includes('מראה פנימית'));
+console.log('PASS: all screens render; progress restores; export excludes private reflections; HTML is escaped; backup retains notebook; blocked storage remains usable; rehearsal totals 8 minutes and the six stages total 60.');
