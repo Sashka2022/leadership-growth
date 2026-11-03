@@ -24,3 +24,11 @@
 @media(max-width:900px){.logos-top{display:none}.char,.char-hero{max-width:none}.char img{max-height:320px}.logos-foot img{width:96px;height:40px}}
 @media(max-width:650px){.logos-foot{gap:8px}.logos-foot img{width:84px;height:36px}.char img{max-height:260px}}
 .welcome{grid-template-columns:minmax(0,1fr) 440px}.welcome h1{font-size:clamp(32px,3.5vw,50px)}@media(max-width:1100px){.welcome{grid-template-columns:minmax(0,1fr) 340px}}@media(max-width:900px){.welcome{grid-template-columns:1fr}}
+/* v4: equal-area logos, characters with their background */
+.logos{gap:18px}.logos img{width:156px;height:65px}.logos-foot img{width:120px;height:50px}.print-logos img{width:150px;height:62px}
+.char img{border:1px solid var(--line);border-radius:20px;box-shadow:0 10px 28px #1d4f9130;filter:none;width:100%;max-height:none;margin:0}
+.head-wrap{grid-template-columns:minmax(0,1fr) 400px;align-items:start}.welcome{grid-template-columns:minmax(0,1fr) 480px}.char-hero img{max-height:none}
+@media(max-width:1250px){.logos img{width:130px;height:54px}}
+@media(max-width:1100px){.welcome{grid-template-columns:minmax(0,1fr) 340px}.head-wrap{grid-template-columns:minmax(0,1fr) 300px}.logos img{width:104px;height:44px}}
+@media(max-width:900px){.welcome,.head-wrap{grid-template-columns:1fr}.char img{max-height:none}.logos-foot img{width:96px;height:40px}}
+@media(max-width:650px){.logos-foot img{width:84px;height:36px}.char img{max-height:none}}
