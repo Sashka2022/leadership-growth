@@ -33,3 +33,4 @@
 @media(max-width:900px){.welcome,.head-wrap{grid-template-columns:1fr}.char img{max-height:none}.logos-foot img{width:96px;height:40px}}
 @media(max-width:650px){.logos-foot img{width:84px;height:36px}.char img{max-height:none}}
 .logos img,.print-logos img{background:#fff;border:1px solid var(--line);border-radius:12px;padding:7px 12px;object-fit:contain}.print-logos img{padding:6px 10px}
+.logos img,.print-logos img{padding:0}
