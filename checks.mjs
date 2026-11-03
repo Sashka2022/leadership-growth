@@ -22,3 +22,7 @@ assert.equal(a.run('phases.reduce((n,p)=>n+p[1],0)'),8);
 assert.equal(a.run('steps.reduce((n,s)=>n+parseInt(s.sub,10),0)'),60);
 assert.ok(printed.includes('assets/logo-haifa.png')&&printed.includes('assets/logo-reshit.png')&&printed.includes('מראה פנימית'));
 console.log('PASS: all screens render; progress restores; export excludes private reflections; HTML is escaped; backup retains notebook; blocked storage remains usable; rehearsal totals 8 minutes and the six stages total 60.');
+a.run("data.route='other'; data.fields.otherRoute='OTHER-DIRECTION'; data.fields.patternCheck='PRIVATE-PATTERN';");
+const other=a.run('planHTML()');assert.ok(other.includes('OTHER-DIRECTION')&&!other.includes('PRIVATE-PATTERN'));
+assert.equal(a.run('routes.length'),6);
+console.log('PASS: the free-form "other" route appears on the card and the pattern check stays private.');
